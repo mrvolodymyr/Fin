@@ -36,5 +36,6 @@ class TransactionsVC: UIViewController, UITableViewDataSource, UITableViewDelega
             greenColor : redColor
         return cell
     }
+    
 
 }

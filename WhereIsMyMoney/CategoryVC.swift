@@ -13,14 +13,19 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
     @IBOutlet weak var transactionSumTextField: UITextField!
     @IBOutlet weak var transactionDescrTextField: UITextField!
     @IBOutlet weak var transactionStatus: UISegmentedControl!
+    @IBOutlet weak var selectedCategoryImg: UIImageView!
+    @IBOutlet weak var selectedCategoryLabel: UILabel!
+    
     var status: Bool = false
+    var imageName: String = ""
+    var categoryName: String = ""
+    var dataModel = DataMolel.dataMolel
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "New transaction"
+        selectedCategoryLabel.text = ""
     }
-    
-    var dataModel = DataMolel.dataMolel
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataModel.categoryes.count
@@ -28,9 +33,16 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "catCell", for: indexPath) as! NewTransCollectionViewCell
-        cell.categoryImage.image	= UIImage(named: dataModel.categoryes[indexPath.row].categoryImg)
+        cell.categoryImage.image = UIImage(named: dataModel.categoryes[indexPath.row].categoryImg)
         cell.categoryLabel.text = dataModel.categoryes[indexPath.row].categoryName
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        imageName = dataModel.categoryes[indexPath.row].categoryImg
+        categoryName = dataModel.categoryes[indexPath.row].categoryName
+        
+        selectedCategoryImg.image = UIImage(named: imageName)
+        selectedCategoryLabel.text = categoryName
     }
     
     @IBAction func createNewCategoryButton(_ sender: Any) {
@@ -49,10 +61,7 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     override func prepare(for createTransactionSegue: UIStoryboardSegue, sender: Any?) {
-        dataModel.addToTransactions(transactionImg: "img_16.jpg", transactionDescr: transactionDescrTextField.text!, transactionSum: Double(transactionSumTextField.text!)!, transactionStatus: status)
+        dataModel.addToTransactions(transactionImg: imageName, transactionDescr: transactionDescrTextField.text!, transactionSum: Double(transactionSumTextField.text!)!, transactionStatus: status)
     }
-    
-    
-
     
 }
