@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="28" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wvc-UA-rmb" id="UEr-E1-mVd">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OKw-Kx-Ldf">
@@ -227,7 +227,7 @@
         <!--New CategoryVC-->
         <scene sceneID="KHY-jD-jUZ">
             <objects>
-                <viewController id="96e-z0-ada" customClass="NewCategoryVC" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCategoryVC" id="96e-z0-ada" customClass="NewCategoryVC" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="37M-g9-I6Q"/>
                         <viewControllerLayoutGuide type="bottom" id="DGO-VC-v2z"/>
@@ -337,7 +337,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vnt-i9-3Ru"/>
         <segue reference="rLS-Ff-5Cl"/>
+        <segue reference="vnt-i9-3Ru"/>
     </inferredMetricsTieBreakers>
 </document>

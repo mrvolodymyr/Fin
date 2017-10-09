@@ -11,6 +11,8 @@ import UIKit
 class TransactionsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var dataModel = DataMolel.dataMolel
+    var redColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.25)
+    var greenColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.25)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +33,7 @@ class TransactionsVC: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.transactionNameLabel.text = dataModel.transactions[indexPath.row].transactionDescr
         cell.sumLabel.text = String(dataModel.transactions[indexPath.row].transactionSum)
         cell.backgroundColor = dataModel.transactions[indexPath.row].transactionStatus == true ?
-                    UIColor.green : UIColor.red
+            greenColor : redColor
         return cell
     }
 

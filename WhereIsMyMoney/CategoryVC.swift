@@ -34,7 +34,10 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     @IBAction func createNewCategoryButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "createNewCategorySegue", sender: self)
+        guard let newCategoryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewCategoryVC") as? NewCategoryVC else{
+            return
+        }
+        navigationController?.pushViewController(newCategoryVC, animated: true)
     }
     
     @IBAction func transactionstatus(_ sender: Any) {
@@ -50,5 +53,6 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     
+
     
 }
