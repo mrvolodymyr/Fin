@@ -208,8 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				2DB23C401F8A20EC00D6E3EB /* img_15.jpg */,
-				2DB23C411F8A20EC00D6E3EB /* img_1.jpg */,
 				2DB23C421F8A20EC00D6E3EB /* img_13.jpg */,
+				2DB23C411F8A20EC00D6E3EB /* img_1.jpg */,
 				2DB23C431F8A20EC00D6E3EB /* img_6.jpg */,
 				2DB23C441F8A20EC00D6E3EB /* img_5.jpg */,
 				2DB23C451F8A20EC00D6E3EB /* img_14.jpg */,
