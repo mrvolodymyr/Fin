@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TransactionsVC-->
+        <!--Transactions View Controller-->
         <scene sceneID="HPs-u6-bob">
             <objects>
-                <viewController id="AWr-vR-K35" customClass="TransactionsVC" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransactionsViewController" id="AWr-vR-K35" customClass="TransactionsViewController" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yqe-10-Whb"/>
                         <viewControllerLayoutGuide type="bottom" id="0mw-ah-SxU"/>
@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="2150.625" y="99.295774647887328"/>
         </scene>
-        <!--CategoryVC-->
+        <!--Category View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CategoryVC" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryViewController" id="BYZ-38-t0r" customClass="CategoryViewController" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -246,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="2962.5" y="100.35211267605634"/>
         </scene>
-        <!--New CategoryVC-->
+        <!--New Category View Controller-->
         <scene sceneID="KHY-jD-jUZ">
             <objects>
-                <viewController storyboardIdentifier="NewCategoryVC" id="96e-z0-ada" customClass="NewCategoryVC" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCategoryViewController" id="96e-z0-ada" customClass="NewCategoryViewController" customModule="WhereIsMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="37M-g9-I6Q"/>
                         <viewControllerLayoutGuide type="bottom" id="DGO-VC-v2z"/>

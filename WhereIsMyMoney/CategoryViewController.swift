@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CategoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var transactionSumTextField: UITextField!
     @IBOutlet weak var transactionDescrTextField: UITextField!
@@ -46,10 +46,10 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     @IBAction func createNewCategoryButton(_ sender: Any) {
-        guard let newCategoryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewCategoryVC") as? NewCategoryVC else{
+        guard let newCategoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewCategoryViewController") as? NewCategoryViewController else{
             return
         }
-        navigationController?.pushViewController(newCategoryVC, animated: true)
+        navigationController?.pushViewController(newCategoryViewController, animated: true)
     }
     
     @IBAction func transactionstatus(_ sender: Any) {
@@ -61,7 +61,12 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     override func prepare(for createTransactionSegue: UIStoryboardSegue, sender: Any?) {
-        dataModel.addToTransactions(transactionImg: imageName, transactionDescr: transactionDescrTextField.text!, transactionSum: Double(transactionSumTextField.text!)!, transactionStatus: status)
+        let transactionDescr = transactionDescrTextField.text!
+        var transactionSum = Double(transactionSumTextField.text!)!
+        if status == false {
+            transactionSum = transactionSum * (-1)
+        }
+        dataModel.addToTransactions(transactionImg: imageName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
     }
     
 }

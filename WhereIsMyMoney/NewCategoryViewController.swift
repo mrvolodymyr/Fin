@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewCategoryVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class NewCategoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var newCategoryTextField: UITextField!
     

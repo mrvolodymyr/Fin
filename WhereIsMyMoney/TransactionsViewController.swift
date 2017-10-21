@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var totalSum: UILabel!
     @IBOutlet weak var transactionTableView: UITableView!
@@ -49,9 +49,7 @@ class TransactionsVC: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.transactionImg.image = UIImage(named: dataModel.transactions[indexPath.row].transactionImg)
         cell.transactionNameLabel.text = transaction.transactionDescr
-        let posetive = String(transaction.transactionSum)
-        let negative = ("-" + String(transaction.transactionSum))
-        transaction.transactionStatus == true ? (cell.sumLabel.text = posetive) : (cell.sumLabel.text = negative)
+        cell.sumLabel.text = String(transaction.transactionSum)
         cell.backgroundColor = transaction.transactionStatus == true ?
             greenColor : redColor
 

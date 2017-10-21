@@ -33,10 +33,10 @@
 		2DE038CE1F87729000429941 /* WhereIsMyMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038CD1F87729000429941 /* WhereIsMyMoneyUITests.swift */; };
 		2DE038E21F87737D00429941 /* CrCatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E11F87737D00429941 /* CrCatCollectionViewCell.swift */; };
 		2DE038E41F8773A100429941 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E31F8773A100429941 /* CategoryModel.swift */; };
-		2DE038E61F8773CA00429941 /* NewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E51F8773CA00429941 /* NewCategoryVC.swift */; };
-		2DE038E81F8773EE00429941 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E71F8773EE00429941 /* CategoryVC.swift */; };
+		2DE038E61F8773CA00429941 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E51F8773CA00429941 /* NewCategoryViewController.swift */; };
+		2DE038E81F8773EE00429941 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E71F8773EE00429941 /* CategoryViewController.swift */; };
 		2DF34CB51F8ABE5500DCE923 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF34CB41F8ABE5500DCE923 /* TransactionTableViewCell.swift */; };
-		2DFABE591F8A953300D7E5AA /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFABE581F8A953300D7E5AA /* TransactionsVC.swift */; };
+		2DFABE591F8A953300D7E5AA /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFABE581F8A953300D7E5AA /* TransactionsViewController.swift */; };
 		2DFABE5B1F8A9F1600D7E5AA /* TransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFABE5A1F8A9F1600D7E5AA /* TransactionsModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,10 +90,10 @@
 		2DE038CF1F87729000429941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE038E11F87737D00429941 /* CrCatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrCatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DE038E31F8773A100429941 /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
-		2DE038E51F8773CA00429941 /* NewCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryVC.swift; sourceTree = "<group>"; };
-		2DE038E71F8773EE00429941 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		2DE038E51F8773CA00429941 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
+		2DE038E71F8773EE00429941 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		2DF34CB41F8ABE5500DCE923 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		2DFABE581F8A953300D7E5AA /* TransactionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
+		2DFABE581F8A953300D7E5AA /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		2DFABE5A1F8A9F1600D7E5AA /* TransactionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,9 +187,9 @@
 		2DE038DD1F8772BC00429941 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2DE038E51F8773CA00429941 /* NewCategoryVC.swift */,
-				2DE038E71F8773EE00429941 /* CategoryVC.swift */,
-				2DFABE581F8A953300D7E5AA /* TransactionsVC.swift */,
+				2DE038E51F8773CA00429941 /* NewCategoryViewController.swift */,
+				2DE038E71F8773EE00429941 /* CategoryViewController.swift */,
+				2DFABE581F8A953300D7E5AA /* TransactionsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -388,8 +388,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE038E81F8773EE00429941 /* CategoryVC.swift in Sources */,
-				2DFABE591F8A953300D7E5AA /* TransactionsVC.swift in Sources */,
+				2DE038E81F8773EE00429941 /* CategoryViewController.swift in Sources */,
+				2DFABE591F8A953300D7E5AA /* TransactionsViewController.swift in Sources */,
 				2DB23C611F8A301A00D6E3EB /* DataMolel.swift in Sources */,
 				2DE038E21F87737D00429941 /* CrCatCollectionViewCell.swift in Sources */,
 				2DB23C3E1F8A1C5500D6E3EB /* NewTransCollectionViewCell.swift in Sources */,
@@ -397,7 +397,7 @@
 				2DF34CB51F8ABE5500DCE923 /* TransactionTableViewCell.swift in Sources */,
 				2DE038AE1F87729000429941 /* AppDelegate.swift in Sources */,
 				2DFABE5B1F8A9F1600D7E5AA /* TransactionsModel.swift in Sources */,
-				2DE038E61F8773CA00429941 /* NewCategoryVC.swift in Sources */,
+				2DE038E61F8773CA00429941 /* NewCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
