@@ -26,5 +26,7 @@ class TransactionsModel: NSObject {
     }
 
     
+        
+
     
 }

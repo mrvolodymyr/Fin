@@ -37,10 +37,10 @@ class CategoryVC: UIViewController, UICollectionViewDataSource, UICollectionView
         cell.categoryLabel.text = dataModel.categoryes[indexPath.row].categoryName
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         imageName = dataModel.categoryes[indexPath.row].categoryImg
         categoryName = dataModel.categoryes[indexPath.row].categoryName
-        
         selectedCategoryImg.image = UIImage(named: imageName)
         selectedCategoryLabel.text = categoryName
     }

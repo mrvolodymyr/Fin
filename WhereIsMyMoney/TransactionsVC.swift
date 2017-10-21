@@ -9,16 +9,32 @@
 import UIKit
 
 class TransactionsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var totalSum: UILabel!
+    @IBOutlet weak var transactionTableView: UITableView!
+
 
     var dataModel = DataMolel.dataMolel
+    
     var redColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.25)
     var greenColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.25)
+    var total = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Transactions"
+        getTotalSum()
     }
 
+    fileprivate func getTotalSum() {
+        let array = dataModel.transactions
+        for i in array{
+        total += i.transactionSum
+        }
+        totalSum.text = String(total)
+    }
+    
     @IBAction func createTransactionButton(_ sender: Any) {
         performSegue(withIdentifier: "transactionSegue", sender: self)
     }
@@ -29,13 +45,17 @@ class TransactionsVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionTableViewCell
+        let transaction = dataModel.transactions[indexPath.row]
+        
         cell.transactionImg.image = UIImage(named: dataModel.transactions[indexPath.row].transactionImg)
-        cell.transactionNameLabel.text = dataModel.transactions[indexPath.row].transactionDescr
-        cell.sumLabel.text = String(dataModel.transactions[indexPath.row].transactionSum)
-        cell.backgroundColor = dataModel.transactions[indexPath.row].transactionStatus == true ?
+        cell.transactionNameLabel.text = transaction.transactionDescr
+        let posetive = String(transaction.transactionSum)
+        let negative = ("-" + String(transaction.transactionSum))
+        transaction.transactionStatus == true ? (cell.sumLabel.text = posetive) : (cell.sumLabel.text = negative)
+        cell.backgroundColor = transaction.transactionStatus == true ?
             greenColor : redColor
+
         return cell
     }
-    
 
 }
