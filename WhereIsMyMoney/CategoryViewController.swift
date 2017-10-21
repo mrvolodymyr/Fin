@@ -64,7 +64,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         let transactionDescr = transactionDescrTextField.text!
         var transactionSum = Double(transactionSumTextField.text!)!
         if status == false {
-            transactionSum = transactionSum * (-1)
+            transactionSum *= (-1)
         }
         dataModel.addToTransactions(transactionImg: imageName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
     }
