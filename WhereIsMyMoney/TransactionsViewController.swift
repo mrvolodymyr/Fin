@@ -56,4 +56,10 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
 
+  
+    @IBAction func statisticButtonTapped(_ sender: Any) {
+        guard let statisticViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StatisticViewController") as? StatisticViewController else { return }
+        self.navigationController?.pushViewController(statisticViewController, animated: true)
+    }
+    
 }
