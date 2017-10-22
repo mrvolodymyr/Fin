@@ -36,6 +36,7 @@
 		2DE038E41F8773A100429941 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E31F8773A100429941 /* CategoryModel.swift */; };
 		2DE038E61F8773CA00429941 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E51F8773CA00429941 /* NewCategoryViewController.swift */; };
 		2DE038E81F8773EE00429941 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E71F8773EE00429941 /* CategoryViewController.swift */; };
+		2DEE08B21F9CBD4C00590222 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEE08B11F9CBD4C00590222 /* StatisticTableViewCell.swift */; };
 		2DF34CB51F8ABE5500DCE923 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF34CB41F8ABE5500DCE923 /* TransactionTableViewCell.swift */; };
 		2DF871341F9C131400992696 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF871331F9C131400992696 /* StatisticModel.swift */; };
 		2DFABE591F8A953300D7E5AA /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFABE581F8A953300D7E5AA /* TransactionsViewController.swift */; };
@@ -113,6 +114,7 @@
 		2DE038E31F8773A100429941 /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		2DE038E51F8773CA00429941 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
 		2DE038E71F8773EE00429941 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		2DEE08B11F9CBD4C00590222 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 		2DF34CB41F8ABE5500DCE923 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		2DF871331F9C131400992696 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		2DFABE581F8A953300D7E5AA /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				2DE038E11F87737D00429941 /* CrCatCollectionViewCell.swift */,
 				2DB23C3D1F8A1C5500D6E3EB /* NewTransCollectionViewCell.swift */,
 				2DF34CB41F8ABE5500DCE923 /* TransactionTableViewCell.swift */,
+				2DEE08B11F9CBD4C00590222 /* StatisticTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				2DE038AE1F87729000429941 /* AppDelegate.swift in Sources */,
 				2DFABE5B1F8A9F1600D7E5AA /* TransactionsModel.swift in Sources */,
 				2DE038E61F8773CA00429941 /* NewCategoryViewController.swift in Sources */,
+				2DEE08B21F9CBD4C00590222 /* StatisticTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

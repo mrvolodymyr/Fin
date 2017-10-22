@@ -11,14 +11,12 @@ import UIKit
 class SpendingByCategory: NSObject {
     var categoryName: String
     var categoryImg: String
-    var spendMoney: Double
-    var color: UIColor
+    var spentMoney: Double
     
-    init (categoryName : String, categoryImg: String, spendMoney: Double, color: UIColor){
+    init (categoryName : String, categoryImg: String, spentMoney: Double){
         self.categoryName = categoryName
         self.categoryImg = categoryImg
-        self.spendMoney = spendMoney
-        self.color = color
+        self.spentMoney = spentMoney
     }
     
 }
