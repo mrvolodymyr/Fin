@@ -29,6 +29,7 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CrCatCell", for: indexPath) as! CrCatCollectionViewCell
         cell.crCatImg.image	= UIImage(named: dataModel.categoryImgArr[indexPath.row])
+        
         return cell
     }
     

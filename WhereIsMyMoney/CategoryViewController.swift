@@ -35,6 +35,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "catCell", for: indexPath) as! NewTransCollectionViewCell
         cell.categoryImage.image = UIImage(named: dataModel.categoryes[indexPath.row].categoryImg)
         cell.categoryLabel.text = dataModel.categoryes[indexPath.row].categoryName
+        
         return cell
     }
     
@@ -46,7 +47,8 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     @IBAction func createNewCategoryButton(_ sender: Any) {
-        guard let newCategoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewCategoryViewController") as? NewCategoryViewController else{
+        guard let newCategoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewCategoryViewController") as? NewCategoryViewController else {
+            
             return
         }
         navigationController?.pushViewController(newCategoryViewController, animated: true)
@@ -63,9 +65,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     override func prepare(for createTransactionSegue: UIStoryboardSegue, sender: Any?) {
         let transactionDescr = transactionDescrTextField.text!
         var transactionSum = Double(transactionSumTextField.text!)!
-        if status == false {
-            transactionSum *= (-1)
-        }
+        if status == false { transactionSum *= (-1) }
         dataModel.addToTransactions(transactionImg: imageName, categoryName: categoryName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
     }
     

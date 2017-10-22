@@ -18,8 +18,6 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     
     var redColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.25)
     var greenColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.25)
-    var total = 0.0
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +27,8 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
 
     fileprivate func getTotalSum() {
         let array = dataModel.transactions
-        for i in array{
-        total += i.transactionSum
-        }
+        var total = dataModel.totalSum
+        for i in array { total += i.transactionSum }
         totalSum.text = String(total)
     }
     
@@ -46,7 +43,6 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionTableViewCell
         let transaction = dataModel.transactions[indexPath.row]
-        
         cell.transactionImg.image = UIImage(named: dataModel.transactions[indexPath.row].transactionImg)
         cell.categoryNameLabel.text = transaction.categoryName
         cell.transactionNameLabel.text = transaction.transactionDescr

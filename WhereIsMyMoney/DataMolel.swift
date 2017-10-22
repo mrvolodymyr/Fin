@@ -14,9 +14,9 @@ class DataMolel: NSObject {
     
     var categoryes: [CategoryModel] = []
     var transactions: [TransactionsModel] = []
+    var totalSum = 0.0
         
     var categoryImgArr = ["img_1.jpg", "img_2.jpg", "img_3.jpg", "img_4.jpg", "img_5.jpg", "img_6.jpg", "img_7.jpg", "img_8.jpg", "img_9.jpg", "img_10.jpg", "img_11.jpg", "img_12.jpg", "img_13.jpg", "img_14.jpg", "img_15.jpg", "img_16.jpg"]
-    
     
     func addToCategoryes(categoryName: String, categoryImg: String){
         let newCategory = CategoryModel(categoryName: categoryName, categoryImg: categoryImg)
