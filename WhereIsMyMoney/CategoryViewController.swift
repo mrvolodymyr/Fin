@@ -19,7 +19,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var dataModel = DataMolel.dataMolel
     var status: Bool = false
-    var imageName: String = ""
+    var selectedImageName: String = ""
     var categoryName: String = ""
     
     override func viewDidLoad() {
@@ -44,9 +44,9 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        imageName = dataModel.categoryes[indexPath.row].categoryImg
+        selectedImageName = dataModel.categoryes[indexPath.row].categoryImg
         categoryName = dataModel.categoryes[indexPath.row].categoryName
-        selectedCategoryImg.image = UIImage(named: imageName)
+        selectedCategoryImg.image = UIImage(named: selectedImageName)
         selectedCategoryLabel.text = categoryName
     }
     
@@ -63,12 +63,22 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     @IBAction func crateTransactionButton(_ sender: Any) {
-        let transactionDescr = transactionDescrTextField.text!
-        var transactionSum = Double(transactionSumTextField.text!)!
-        if status == false { transactionSum *= (-1) }
-        dataModel.addToTransactions(transactionImg: imageName, categoryName: categoryName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
+        if !(transactionSumTextField.text?.isEmpty)! && !(selectedImageName.isEmpty)  {
+            let transactionDescr = transactionDescrTextField.text!
+            var transactionSum = Double(transactionSumTextField.text!)!
+            if status == false { transactionSum *= (-1) }
+            dataModel.addToTransactions(transactionImg: selectedImageName, categoryName: categoryName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
+            
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            let alert = UIAlertController(title: "Please", message: "Enter sum and select category image ", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+
         
-        self.navigationController?.popViewController(animated: true)
         
         
     }

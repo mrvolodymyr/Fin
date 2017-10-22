@@ -37,10 +37,17 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
         selectedImage.image = UIImage(named: dataModel.categoryImgArr[indexPath.row])
         imageName = dataModel.categoryImgArr[indexPath.row]
     }
-
+    
     @IBAction func createCategoryButton(_ sender: Any) {
-        dataModel.addToCategoryes(categoryName: newCategoryTextField.text!, categoryImg: imageName)
-        navigationController?.popViewController(animated: true)
-        
+        if !(newCategoryTextField.text?.isEmpty)! && !(imageName.isEmpty) {
+            dataModel.addToCategoryes(categoryName: newCategoryTextField.text!, categoryImg: imageName)
+            navigationController?.popViewController(animated: true)
+        } else {
+            let alert = UIAlertController(title: "Please", message: "Enter category name and select category image ", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
