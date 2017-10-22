@@ -12,6 +12,8 @@ class StatisticViewController: UIViewController, UITableViewDataSource, UITableV
 
     let statisticData = DataMolel.dataMolel
     var spentArray = [CategoryModel]()
+    let dataModel = DataMolel.dataMolel
+    
     @IBOutlet weak var sortedCategoryTableView: UITableView!
     
     
@@ -51,8 +53,10 @@ class StatisticViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "statisticCell", for: indexPath) as! StatisticTableViewCell
         let spent = spentArray[indexPath.row]
+        let sum = getCategoryTotalSum(key: spent.categoryName)
         cell.categoryNameLabel.text = spent.categoryName
-        cell.totalSumLabel.text = String(getCategoryTotalSum(key: spent.categoryName))
+        cell.totalSumLabel.text = String(sum)
+        sum > 0.0 ? (cell.backgroundColor  = dataModel.greenColor) : (cell.backgroundColor = dataModel.redColor)
         cell.categoryImage.image = UIImage(named: spent.categoryImg)
         
         return cell

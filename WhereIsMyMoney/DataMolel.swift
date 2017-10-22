@@ -18,6 +18,9 @@ class DataMolel: NSObject {
         
     var categoryImgArr = ["img_1.jpg", "img_2.jpg", "img_3.jpg", "img_4.jpg", "img_5.jpg", "img_6.jpg", "img_7.jpg", "img_8.jpg", "img_9.jpg", "img_10.jpg", "img_11.jpg", "img_12.jpg", "img_13.jpg", "img_14.jpg", "img_15.jpg", "img_16.jpg"]
     
+    var redColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.2)
+    var greenColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
+    
     func addToCategoryes(categoryName: String, categoryImg: String){
         let newCategory = CategoryModel(categoryName: categoryName, categoryImg: categoryImg)
         categoryes.append(newCategory)

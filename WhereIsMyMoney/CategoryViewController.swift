@@ -16,6 +16,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var selectedCategoryImg: UIImageView!
     @IBOutlet weak var selectedCategoryLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var createTransactionButton: UIButton!
     
     var dataModel = DataMolel.dataMolel
     var status: Bool = false
@@ -26,9 +27,22 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
         self.title = "New transaction"
         selectedCategoryLabel.text = ""
+        editing()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         self.collectionView.reloadData()
+    }
+    
+    fileprivate func editing (){
+        if myIndexPathRow != nil {
+            let index = dataModel.transactions[myIndexPathRow!]
+            transactionSumTextField.text = String(index.transactionSum)
+            transactionDescrTextField.text = index.transactionDescr
+            selectedCategoryImg.image = UIImage(named: index.transactionImg)
+            selectedCategoryLabel.text = index.categoryName
+            createTransactionButton.setTitle("Save category", for: .normal)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

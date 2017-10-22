@@ -8,25 +8,26 @@
 
 import UIKit
 
+var myIndexPathRow: Int? = nil
+
 class TransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var totalSum: UILabel!
     @IBOutlet weak var transactionTableView: UITableView!
 
-
     var dataModel = DataMolel.dataMolel
-    
-    var redColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.25)
-    var greenColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.25)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Transactions"
+        self.transactionTableView.dataSource = self
+        self.transactionTableView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.transactionTableView.reloadData()
         getTotalSum()
+        
     }
 
     fileprivate func getTotalSum() {
@@ -48,14 +49,38 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         cell.transactionNameLabel.text = transaction.transactionDescr
         cell.sumLabel.text = String(transaction.transactionSum)
         cell.backgroundColor = transaction.transactionStatus == true ?
-            greenColor : redColor
+            dataModel.greenColor : dataModel.redColor
 
         return cell
     }
-
-    @IBAction func addCategoryViewControllerButton(_ sender: Any) {
+    
+    fileprivate func pushCategoryViewController(row: Int?){
         guard let categoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController else { return }
         self.navigationController?.pushViewController(categoryViewController, animated: true)
+        myIndexPathRow = row
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       myIndexPathRow = indexPath.row
+        performSegue(withIdentifier: "categorySegue", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "WARNING", message: "Do you want to delete this transaction?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            self.dataModel.transactions.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .top)
+            self.transactionTableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "NO", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    @IBAction func addCategoryViewControllerButton(_ sender: Any) {
+        pushCategoryViewController(row: nil)
     }
   
     @IBAction func statisticButtonTapped(_ sender: Any) {
