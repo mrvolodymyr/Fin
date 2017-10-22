@@ -48,6 +48,7 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         let transaction = dataModel.transactions[indexPath.row]
         
         cell.transactionImg.image = UIImage(named: dataModel.transactions[indexPath.row].transactionImg)
+        cell.categoryNameLabel.text = transaction.categoryName
         cell.transactionNameLabel.text = transaction.transactionDescr
         cell.sumLabel.text = String(transaction.transactionSum)
         cell.backgroundColor = transaction.transactionStatus == true ?

@@ -13,6 +13,7 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var sumLabel: UILabel!
     @IBOutlet weak var transactionNameLabel: UILabel!
     @IBOutlet weak var transactionImg: UIImageView!
+    @IBOutlet weak var categoryNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -37,11 +37,27 @@
 		2DE038E61F8773CA00429941 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E51F8773CA00429941 /* NewCategoryViewController.swift */; };
 		2DE038E81F8773EE00429941 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE038E71F8773EE00429941 /* CategoryViewController.swift */; };
 		2DF34CB51F8ABE5500DCE923 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF34CB41F8ABE5500DCE923 /* TransactionTableViewCell.swift */; };
+		2DF871341F9C131400992696 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF871331F9C131400992696 /* StatisticModel.swift */; };
 		2DFABE591F8A953300D7E5AA /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFABE581F8A953300D7E5AA /* TransactionsViewController.swift */; };
 		2DFABE5B1F8A9F1600D7E5AA /* TransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFABE5A1F8A9F1600D7E5AA /* TransactionsModel.swift */; };
+		970A7AFD266992ED7BD494D7 /* Pods_WhereIsMyMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF48BEA78CA8EABF9734FE49 /* Pods_WhereIsMyMoney.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2D18DEEF1F9C0206008FDACC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D18DEEA1F9C0206008FDACC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ECC5A4A4B4213BD74021B24AD7E93E69;
+			remoteInfo = PieCharts;
+		};
+		2D18DEF11F9C0206008FDACC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D18DEEA1F9C0206008FDACC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 841C5728A9749E4DC01B702A5D9D695D;
+			remoteInfo = "Pods-WhereIsMyMoney";
+		};
 		2DE038BF1F87729000429941 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DE038A21F87728F00429941 /* Project object */;
@@ -59,6 +75,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B2B3B51F7AD2E00E46E8CED /* Pods-WhereIsMyMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsMyMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsMyMoney/Pods-WhereIsMyMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		1451FAB8F438EB2793F292CE /* Pods-WhereIsMyMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsMyMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsMyMoney/Pods-WhereIsMyMoney.release.xcconfig"; sourceTree = "<group>"; };
+		2D18DEEA1F9C0206008FDACC /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		2D19EACD1F9BF2E400E3A418 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		2DB23C3D1F8A1C5500D6E3EB /* NewTransCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DB23C401F8A20EC00D6E3EB /* img_15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img_15.jpg; path = img/img_15.jpg; sourceTree = SOURCE_ROOT; };
@@ -95,8 +114,10 @@
 		2DE038E51F8773CA00429941 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
 		2DE038E71F8773EE00429941 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		2DF34CB41F8ABE5500DCE923 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		2DF871331F9C131400992696 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		2DFABE581F8A953300D7E5AA /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		2DFABE5A1F8A9F1600D7E5AA /* TransactionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsModel.swift; sourceTree = "<group>"; };
+		CF48BEA78CA8EABF9734FE49 /* Pods_WhereIsMyMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsMyMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				970A7AFD266992ED7BD494D7 /* Pods_WhereIsMyMoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,13 +146,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D18DEEB1F9C0206008FDACC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D18DEF01F9C0206008FDACC /* PieCharts.framework */,
+				2D18DEF21F9C0206008FDACC /* Pods_WhereIsMyMoney.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2DE038A11F87728F00429941 = {
 			isa = PBXGroup;
 			children = (
+				2D18DEEA1F9C0206008FDACC /* Pods.xcodeproj */,
 				2DE038AC1F87729000429941 /* WhereIsMyMoney */,
 				2DE038C11F87729000429941 /* WhereIsMyMoneyTests */,
 				2DE038CC1F87729000429941 /* WhereIsMyMoneyUITests */,
 				2DE038AB1F87729000429941 /* Products */,
+				3163605D0F336BC034FD4C02 /* Pods */,
+				BFE811E65FE49ECEF898A1EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +237,7 @@
 				2DE038E31F8773A100429941 /* CategoryModel.swift */,
 				2DB23C601F8A301A00D6E3EB /* DataMolel.swift */,
 				2DFABE5A1F8A9F1600D7E5AA /* TransactionsModel.swift */,
+				2DF871331F9C131400992696 /* StatisticModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -240,6 +275,23 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		3163605D0F336BC034FD4C02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B2B3B51F7AD2E00E46E8CED /* Pods-WhereIsMyMoney.debug.xcconfig */,
+				1451FAB8F438EB2793F292CE /* Pods-WhereIsMyMoney.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFE811E65FE49ECEF898A1EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF48BEA78CA8EABF9734FE49 /* Pods_WhereIsMyMoney.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +299,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DE038D21F87729000429941 /* Build configuration list for PBXNativeTarget "WhereIsMyMoney" */;
 			buildPhases = (
+				C95DA704820153A25A4D7C01 /* [CP] Check Pods Manifest.lock */,
 				2DE038A61F87729000429941 /* Sources */,
 				2DE038A71F87729000429941 /* Frameworks */,
 				2DE038A81F87729000429941 /* Resources */,
+				499C77F858AC9CEBBE13555E /* [CP] Embed Pods Frameworks */,
+				796A762425F41AC7526A8274 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,7 +358,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Volodymyr;
 				TargetAttributes = {
 					2DE038A91F87729000429941 = {
@@ -334,6 +389,12 @@
 			mainGroup = 2DE038A11F87728F00429941;
 			productRefGroup = 2DE038AB1F87729000429941 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2D18DEEB1F9C0206008FDACC /* Products */;
+					ProjectRef = 2D18DEEA1F9C0206008FDACC /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2DE038A91F87729000429941 /* WhereIsMyMoney */,
@@ -342,6 +403,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2D18DEF01F9C0206008FDACC /* PieCharts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PieCharts.framework;
+			remoteRef = 2D18DEEF1F9C0206008FDACC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D18DEF21F9C0206008FDACC /* Pods_WhereIsMyMoney.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_WhereIsMyMoney.framework;
+			remoteRef = 2D18DEF11F9C0206008FDACC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2DE038A81F87729000429941 /* Resources */ = {
@@ -386,6 +464,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		499C77F858AC9CEBBE13555E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsMyMoney/Pods-WhereIsMyMoney-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PieCharts/PieCharts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PieCharts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsMyMoney/Pods-WhereIsMyMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		796A762425F41AC7526A8274 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsMyMoney/Pods-WhereIsMyMoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C95DA704820153A25A4D7C01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhereIsMyMoney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DE038A61F87729000429941 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -399,6 +531,7 @@
 				2DB23C3E1F8A1C5500D6E3EB /* NewTransCollectionViewCell.swift in Sources */,
 				2DE038E41F8773A100429941 /* CategoryModel.swift in Sources */,
 				2DF34CB51F8ABE5500DCE923 /* TransactionTableViewCell.swift in Sources */,
+				2DF871341F9C131400992696 /* StatisticModel.swift in Sources */,
 				2DE038AE1F87729000429941 /* AppDelegate.swift in Sources */,
 				2DFABE5B1F8A9F1600D7E5AA /* TransactionsModel.swift in Sources */,
 				2DE038E61F8773CA00429941 /* NewCategoryViewController.swift in Sources */,
@@ -466,7 +599,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -474,7 +609,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -517,7 +656,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -525,7 +666,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -553,6 +698,7 @@
 		};
 		2DE038D31F87729000429941 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B2B3B51F7AD2E00E46E8CED /* Pods-WhereIsMyMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -567,6 +713,7 @@
 		};
 		2DE038D41F87729000429941 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1451FAB8F438EB2793F292CE /* Pods-WhereIsMyMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

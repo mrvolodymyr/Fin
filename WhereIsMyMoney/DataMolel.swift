@@ -23,8 +23,8 @@ class DataMolel: NSObject {
         categoryes.append(newCategory)
     }
     
-    func addToTransactions(transactionImg: String, transactionDescr: String, transactionSum: Double, transactionStatus: Bool){
-        let newTransaction = TransactionsModel(transactionImg: transactionImg, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: transactionStatus)
+    func addToTransactions(transactionImg: String, categoryName: String, transactionDescr: String, transactionSum: Double, transactionStatus: Bool){
+        let newTransaction = TransactionsModel(transactionImg: transactionImg, categoryName: categoryName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: transactionStatus)
     transactions.insert(newTransaction, at: 0)
     }
 }

@@ -16,10 +16,10 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var selectedCategoryImg: UIImageView!
     @IBOutlet weak var selectedCategoryLabel: UILabel!
     
+    var dataModel = DataMolel.dataMolel
     var status: Bool = false
     var imageName: String = ""
     var categoryName: String = ""
-    var dataModel = DataMolel.dataMolel
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         if status == false {
             transactionSum *= (-1)
         }
-        dataModel.addToTransactions(transactionImg: imageName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
+        dataModel.addToTransactions(transactionImg: imageName, categoryName: categoryName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
     }
     
 }
