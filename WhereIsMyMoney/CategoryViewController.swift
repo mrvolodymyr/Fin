@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var transactionStatus: UISegmentedControl!
     @IBOutlet weak var selectedCategoryImg: UIImageView!
     @IBOutlet weak var selectedCategoryLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var dataModel = DataMolel.dataMolel
     var status: Bool = false
@@ -25,6 +26,9 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
         self.title = "New transaction"
         selectedCategoryLabel.text = ""
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,14 +63,15 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     @IBAction func crateTransactionButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "createTransactionSegue", sender: self)
-    }
-    
-    override func prepare(for createTransactionSegue: UIStoryboardSegue, sender: Any?) {
         let transactionDescr = transactionDescrTextField.text!
         var transactionSum = Double(transactionSumTextField.text!)!
         if status == false { transactionSum *= (-1) }
         dataModel.addToTransactions(transactionImg: imageName, categoryName: categoryName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
+        
+        self.navigationController?.popViewController(animated: true)
+        
+        
     }
+
     
 }

@@ -22,6 +22,10 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Transactions"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.transactionTableView.reloadData()
         getTotalSum()
     }
 
@@ -32,10 +36,6 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         totalSum.text = String(total)
     }
     
-    @IBAction func createTransactionButton(_ sender: Any) {
-        performSegue(withIdentifier: "transactionSegue", sender: self)
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataModel.transactions.count
     }
@@ -53,6 +53,10 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
 
+    @IBAction func addCategoryViewControllerButton(_ sender: Any) {
+        guard let categoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController else { return }
+        self.navigationController?.pushViewController(categoryViewController, animated: true)
+    }
   
     @IBAction func statisticButtonTapped(_ sender: Any) {
         guard let statisticViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StatisticViewController") as? StatisticViewController else { return }

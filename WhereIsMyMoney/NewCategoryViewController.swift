@@ -13,7 +13,7 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var newCategoryTextField: UITextField!
     
     @IBOutlet weak var selectedImage: UIImageView!
-    var imgName: String = ""
+    var imageName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +35,12 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedImage.image = UIImage(named: dataModel.categoryImgArr[indexPath.row])
-        imgName = dataModel.categoryImgArr[indexPath.row]
+        imageName = dataModel.categoryImgArr[indexPath.row]
     }
 
-    override func prepare(for categorySegue: UIStoryboardSegue, sender: Any?) {
-        dataModel.addToCategoryes(categoryName: newCategoryTextField.text!, categoryImg:  imgName)
-    }
-    
     @IBAction func createCategoryButton(_ sender: Any) {
-        performSegue(withIdentifier: "categorySegue", sender: self)
+        dataModel.addToCategoryes(categoryName: newCategoryTextField.text!, categoryImg: imageName)
+        navigationController?.popViewController(animated: true)
+        
     }
 }

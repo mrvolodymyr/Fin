@@ -12,13 +12,18 @@ class StatisticViewController: UIViewController, UITableViewDataSource, UITableV
 
     let statisticData = DataMolel.dataMolel
     var spentArray = [CategoryModel]()
-
+    @IBOutlet weak var sortedCategoryTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sort()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.sortedCategoryTableView.reloadData()
+    }
+    
     fileprivate func sort() {
         let transaction = statisticData.transactions
         let category = statisticData.categoryes
