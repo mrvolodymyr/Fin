@@ -14,6 +14,7 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBOutlet weak var selectedImage: UIImageView!
     var imageName: String = ""
+    var storeData = DataStore.dataStore
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +50,35 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
             }))
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    //MARK: - save data
+    var filePath: String {
+        let manager = FileManager.default
+        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first
+        return url!.appendingPathComponent("Categoryes").path
+    }
+    
+    private func saveData(category: CategoryModel){
+        self.dataModel.categoryes.append(category)
+        NSKeyedArchiver.archiveRootObject(self.storeData.categoryes, toFile: filePath)
+    }
+    
+    func saveCategory() {
+        let categoryName = newCategoryTextField.text!
+        let categoryImage = imageName
+        let newCategory = CategoryModel(categoryName: categoryName, categoryImg: categoryImage)
+        self.saveData(category: newCategory)
+    }
+    
+    @IBAction func saveCategoryButton(_ sender: Any) {
+        saveCategory()
+        let alert = UIAlertController(title: "Save category", message: "Category was saved", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            self.selectedImage.image = nil
+            self.newCategoryTextField.text = ""
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
