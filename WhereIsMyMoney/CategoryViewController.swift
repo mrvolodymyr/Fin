@@ -53,7 +53,6 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "catCell", for: indexPath) as! NewTransCollectionViewCell
         cell.categoryImage.image = UIImage(named: dataModel.categoryes[indexPath.row].categoryImg)
         cell.categoryLabel.text = dataModel.categoryes[indexPath.row].categoryName
-        
         return cell
     }
     
@@ -66,7 +65,6 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBAction func createNewCategoryButton(_ sender: Any) {
         guard let newCategoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewCategoryViewController") as? NewCategoryViewController else {
-            
             return
         }
         navigationController?.pushViewController(newCategoryViewController, animated: true)
@@ -82,19 +80,14 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
             var transactionSum = Double(transactionSumTextField.text!)!
             if status == false { transactionSum *= (-1) }
             dataModel.addToTransactions(transactionImg: selectedImageName, categoryName: categoryName, transactionDescr: transactionDescr, transactionSum: transactionSum, transactionStatus: status)
-            
             self.navigationController?.popViewController(animated: true)
         } else {
-            let alert = UIAlertController(title: "Please", message: "Enter sum and select category image ", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Please", message: "Enter sum and select category image", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                 alert.dismiss(animated: true, completion: nil)
             }))
-            self.present(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
         }
-
-        
-        
-        
     }
 
     

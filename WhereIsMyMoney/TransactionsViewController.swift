@@ -27,7 +27,6 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidAppear(_ animated: Bool) {
         self.transactionTableView.reloadData()
         getTotalSum()
-        
     }
 
     fileprivate func getTotalSum() {
@@ -50,7 +49,6 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         cell.sumLabel.text = String(transaction.transactionSum)
         cell.backgroundColor = transaction.transactionStatus == true ?
             dataModel.greenColor : dataModel.redColor
-
         return cell
     }
     
@@ -72,6 +70,7 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
             self.dataModel.transactions.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .top)
             self.transactionTableView.reloadData()
+            self.getTotalSum()
         }))
         alert.addAction(UIAlertAction(title: "NO", style: .default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
