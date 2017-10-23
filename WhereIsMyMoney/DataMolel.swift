@@ -31,3 +31,9 @@ class DataMolel: NSObject {
     transactions.insert(newTransaction, at: 0)
     }
 }
+class DataStore {
+    static let dataStore = DataStore()
+    private init(){}
+    var categoryes: [CategoryModel] = []
+    var transactions: [TransactionsModel] = []
+}
