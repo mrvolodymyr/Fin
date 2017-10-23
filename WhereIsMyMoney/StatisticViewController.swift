@@ -26,6 +26,7 @@ class StatisticViewController: UIViewController, UITableViewDataSource, UITableV
         self.sortedCategoryTableView.reloadData()
     }
     
+    //MARK: - function sort
     fileprivate func sort() {
         let transaction = statisticData.transactions
         let category = statisticData.categoryes
@@ -35,6 +36,7 @@ class StatisticViewController: UIViewController, UITableViewDataSource, UITableV
 
     }
     
+    //MARK: - get category name from transaction array
     fileprivate func getCategoryTotalSum(key: String) -> Double {
         let transaction = statisticData.transactions
         var sum = 0.0
@@ -45,7 +47,8 @@ class StatisticViewController: UIViewController, UITableViewDataSource, UITableV
         }
         return sum
     }
-
+    
+    //MARK: - create reusable cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return spentArray.count
     }

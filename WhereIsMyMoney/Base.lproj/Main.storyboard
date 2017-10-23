@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,55 +106,11 @@
                     <connections>
                         <outlet property="totalSum" destination="RDd-OH-ZeP" id="rpM-xh-Vkb"/>
                         <outlet property="transactionTableView" destination="ShG-8I-9UQ" id="Iuo-bK-8ch"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="categorySegue" id="cck-6M-RxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oE3-IH-hr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2150.625" y="99.295774647887328"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="nMg-v8-vLZ">
-            <objects>
-                <viewController id="zFY-a4-roB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IUs-AS-8Ck"/>
-                        <viewControllerLayoutGuide type="bottom" id="bTu-rh-cxa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2gq-KB-cgz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Lw-C7-KJD" customClass="PieChart" customModule="PieCharts">
-                                <rect key="frame" x="48" y="331" width="211" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HrW-ht-9NW">
-                                <rect key="frame" x="40" y="102" width="219" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IZp-fZ-tCU">
-                                        <rect key="frame" x="0.0" y="28" width="219" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IZp-fZ-tCU" id="o2x-vU-dkv">
-                                            <rect key="frame" x="0.0" y="0.0" width="219" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="pieChart" destination="2gq-KB-cgz" id="dxS-oY-WXy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="osp-6H-0oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1356" y="799"/>
         </scene>
         <!--Statistic View Controller-->
         <scene sceneID="HJb-ZR-kdz">
@@ -304,13 +260,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QC-No-hig">
-                                                    <rect key="frame" x="11" y="90" width="57" height="21"/>
+                                                    <rect key="frame" x="-5" y="90" width="89" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JO9-gK-4jt">
-                                                    <rect key="frame" x="13" y="18" width="54" height="66"/>
+                                                    <rect key="frame" x="-3" y="-2" width="86" height="86"/>
                                                 </imageView>
                                             </subviews>
                                         </view>

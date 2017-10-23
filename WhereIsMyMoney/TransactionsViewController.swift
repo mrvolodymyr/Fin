@@ -36,6 +36,7 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         totalSum.text = String(total)
     }
     
+    //MARK: - create reusable cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataModel.transactions.count
     }
@@ -58,11 +59,7 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         myIndexPathRow = row
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       myIndexPathRow = indexPath.row
-        performSegue(withIdentifier: "categorySegue", sender: self)
-    }
-    
+    //MARK: - delede transaction
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let alert = UIAlertController(title: "WARNING", message: "Do you want to delete this transaction?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (action) in
@@ -82,6 +79,7 @@ class TransactionsViewController: UIViewController, UITableViewDataSource, UITab
         pushCategoryViewController(row: nil)
     }
   
+    //MARK: - statistic button
     @IBAction func statisticButtonTapped(_ sender: Any) {
         guard let statisticViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StatisticViewController") as? StatisticViewController else { return }
         self.navigationController?.pushViewController(statisticViewController, animated: true)

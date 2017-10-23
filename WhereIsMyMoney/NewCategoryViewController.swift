@@ -23,6 +23,7 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
     
     var dataModel = DataMolel.dataMolel
     
+    //MARK: - create reusable cell
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataModel.categoryImgArr.count
     }
@@ -39,6 +40,7 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
         imageName = dataModel.categoryImgArr[indexPath.row]
     }
     
+    //MARK: - create category button
     @IBAction func createCategoryButton(_ sender: Any) {
         if !(newCategoryTextField.text?.isEmpty)! && !(imageName.isEmpty) {
             dataModel.addToCategoryes(categoryName: newCategoryTextField.text!, categoryImg: imageName)
@@ -71,6 +73,7 @@ class NewCategoryViewController: UIViewController, UICollectionViewDataSource, U
         self.saveData(category: newCategory)
     }
     
+    //MARK: - save button
     @IBAction func saveCategoryButton(_ sender: Any) {
         saveCategory()
         let alert = UIAlertController(title: "Save category", message: "Category was saved", preferredStyle: .alert)

@@ -27,24 +27,13 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
         self.title = "New transaction"
         selectedCategoryLabel.text = ""
-        editing()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.collectionView.reloadData()
     }
     
-    fileprivate func editing (){
-        if myIndexPathRow != nil {
-            let index = dataModel.transactions[myIndexPathRow!]
-            transactionSumTextField.text = String(index.transactionSum)
-            transactionDescrTextField.text = index.transactionDescr
-            selectedCategoryImg.image = UIImage(named: index.transactionImg)
-            selectedCategoryLabel.text = index.categoryName
-            createTransactionButton.setTitle("Save category", for: .normal)
-        }
-    }
-    
+    //MARK: - create reusable cell
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataModel.categoryes.count
     }
@@ -63,6 +52,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         selectedCategoryLabel.text = categoryName
     }
     
+    //MARK: - create new category button
     @IBAction func createNewCategoryButton(_ sender: Any) {
         guard let newCategoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewCategoryViewController") as? NewCategoryViewController else {
             return
@@ -74,6 +64,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         status = transactionStatus.selectedSegmentIndex == 0 ? false : true
     }
     
+    //MARK: - create transaction button
     @IBAction func crateTransactionButton(_ sender: Any) {
         if !(transactionSumTextField.text?.isEmpty)! && !(selectedImageName.isEmpty)  {
             let transactionDescr = transactionDescrTextField.text!
